@@ -53,11 +53,11 @@ This command reads `semgrep_output.json` and stores the parsed data into `semgre
 
 The following are some example queries that can be used to easily extract the relevant information about the scan results.
 ```sql
-	SELECT COUNT(id) FROM findings
-	SELECT DISTINCT semgrep_rule FROM findings
-	SELECT id FROM findings WHERE confidence = 3
-	SELECT  id, semgrep_rule FROM findings WHERE confidence > 1
-	SELECT  semgrep_rule, file, code, line FROM findings WHERE id = 1
+SELECT COUNT(id) FROM findings
+SELECT DISTINCT semgrep_rule FROM findings
+SELECT id FROM findings WHERE confidence = 3
+SELECT  id, semgrep_rule FROM findings WHERE confidence > 1
+SELECT  semgrep_rule, file, code, line FROM findings WHERE id = 1
 ```
 - **Note**: Confidence values. HIGH=3, MEDIUM=2 and LOW=1.
 
